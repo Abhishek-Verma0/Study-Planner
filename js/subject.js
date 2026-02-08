@@ -1,3 +1,12 @@
+// js for hamburger on nav
+
+const hamburger = document.getElementById("hamburger");
+const navOptions = document.getElementById("nav-Option");
+
+hamburger.addEventListener("click", () => {
+  navOptions.classList.toggle("active");
+});
+
 //  logic to save subject form to local storage
 
 let form = document.getElementById("addSub");
@@ -122,7 +131,6 @@ function cancelEdit(id) {
   let viewMode = card.querySelector(".view-mode");
   let editMode = card.querySelector(".edit-mode");
 
-  
   viewMode.style.display = "block";
   editMode.style.display = "none";
 }
@@ -155,12 +163,7 @@ function saveSubject(id) {
   // save updated subjects to localStorage
   localStorage.setItem("subjects", JSON.stringify(subjects));
 
- 
   displaySub();
 
   console.log("subject edited");
 }
-
-
-
-

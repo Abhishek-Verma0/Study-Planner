@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <link rel="stylesheet" href="./css/progress.css">
+</head>
+<body>
+
+    <nav class="nav-section">
+        <div class="nav-cont">
+            <div class="app-title">Study-Planner</div>
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+            <div class="nav-options" id="nav-Option">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#subjects">Subjects</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#tasks">Tasks</a>
+                <a href="#progress">Progress</a>
+                <a href="#setttings">Settings</a>
+            </div>
+        </div>
+    </nav>
+
+<div class="progress-section">
+
+    <h2>Your Study Progress</h2>
+
+    <div class="stats">
+        <p>Total Tasks: <span id="total-tasks">0</span></p>
+        <p>Completed: <span id="completed-tasks">0</span></p>
+        <p>Pending: <span id="pending-tasks">0</span></p>
+        <p>Missed: <span id="missed-tasks">0</span></p>
+    </div>
+
+    <h3>Completion Rate</h3>
+    <div class="progress-bar">
+        <div id="progress-fill"></div>
+    </div>
+    <p id="percentage-text">0%</p>
+
+    <h3 id="performance-msg"></h3>
+
+</div>
+
+<script src="./js/progress.js"></script>
+</body>
+</html>

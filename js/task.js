@@ -1,3 +1,12 @@
+// js for hamburger on nav
+
+const hamburger = document.getElementById("hamburger");
+const navOptions = document.getElementById("nav-Option");
+
+hamburger.addEventListener("click", () => {
+  navOptions.classList.toggle("active");
+});
+
 const task_DB = "tasks";
 const subject_DB = "subjects";
 
@@ -56,7 +65,6 @@ function renderTasks() {
 
   pending_taksList.innerHTML = "";
   all_taskList.innerHTML = "";
-
 
   let completed = tasks.filter((t) => t.completed).length;
   let pending = tasks.length - completed;
@@ -121,8 +129,8 @@ function createRecentCard(task) {
     card.classList.add("completed");
   } else if (task.dueDate < today) {
     statusText = "Missed";
-      statusClass = "status-pending";
-      card.classList.add("incomplete");
+    statusClass = "status-pending";
+    card.classList.add("incomplete");
   }
 
   card.innerHTML = `
@@ -166,7 +174,7 @@ form.addEventListener("submit", function (e) {
 
   saveData(task_DB, tasks);
   form.reset();
-  setMinDate(); 
+  setMinDate();
   renderTasks();
 });
 
@@ -195,8 +203,7 @@ function deleteTask(index) {
   renderTasks();
 }
 
-
-//  calling function to  render tasks and data 
+//  calling function to  render tasks and data
 
 loadSubjects();
 setMinDate();
