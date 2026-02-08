@@ -19,6 +19,7 @@ form.addEventListener("submit", function(e){
     //  subjct obj to  store the values in local storage
 
     const subject = {
+        id: Date.now(),
         name: name,
         hours: hours,
         priority: priority,
@@ -33,6 +34,8 @@ form.addEventListener("submit", function(e){
     localStorage.setItem("subjects", JSON.stringify(subjects));
     
     form.reset()
+
+    displaySub()
     console.log("saved to local storge")
     console.log(subjects)
 })
@@ -71,4 +74,23 @@ function displaySub() {
       subjectList.appendChild(card);
     });
     
+}
+
+
+/**  logic to delete a subject */
+
+
+function deleteSubject(id) {
+    if (confirm("Are you sure you want to delete this subject?")) {
+        let subjects = JSON.parse(localStorage.getItem("subjects") || [])
+
+        //  filtering the subjects with help of id 
+        subjects = subjects.filter(function (subject) {
+            return subject.id !== id;
+        });
+        // save updated subjects array after filter
+        localStorage.setItem("subjects", JSON.stringify(subjects));
+        displaySub()
+        console.log("subject deleted")
+    }
 }
