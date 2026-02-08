@@ -7,11 +7,12 @@ hamburger.addEventListener("click", () => {
   navOptions.classList.toggle("active");
 });
 
+//  declaring var to store local storage data for further use
 const subject_DB = "subjects";
 const task_DB = "tasks";
 const schedule_DB = "schedule";
 
-// Elements
+// selecting elements to be used
 const totalSubjectsEl = document.getElementById("total-subjects");
 const totalTasksEl = document.getElementById("total-tasks");
 const completedTasksEl = document.getElementById("completed-tasks");
@@ -22,6 +23,7 @@ const todayScheduleEl = document.getElementById("today-schedule");
 const upcomingEl = document.getElementById("upcoming-deadlines");
 
 
+//  function to convert local storage data string to JSON object
 function getData(key) {
   return JSON.parse(localStorage.getItem(key)) || [];
 }
@@ -42,7 +44,7 @@ function renderDashboard() {
 
   const today = todayDate();
 
-  // stat
+  // number of subject or tasks
   totalSubjectsEl.textContent = subjects.length;
   totalTasksEl.textContent = tasks.length;
 

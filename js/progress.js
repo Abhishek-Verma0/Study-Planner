@@ -7,6 +7,7 @@ hamburger.addEventListener("click", () => {
   navOptions.classList.toggle("active");
 });
 
+//  getting data from localStorage 
 const taks_DB = "tasks";
 
 const totalEl = document.getElementById("total-tasks");
