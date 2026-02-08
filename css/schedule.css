@@ -1,4 +1,4 @@
-/* ==================== BASE STYLES ==================== */
+
 * {
     padding: 0;
     margin: 0;
@@ -223,7 +223,6 @@ body {
 .schedule-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-left: 4px solid var(--purple);
     padding: 1.5rem;
     border-radius: 12px;
     display: flex;
@@ -235,8 +234,7 @@ body {
 
 .schedule-card:hover {
     box-shadow: var(--shadow-md);
-    transform: translateX(4px);
-    border-left-color: var(--accent-primary);
+    transform: translateY(-2px);
 }
 
 .schedule-info {
@@ -307,6 +305,26 @@ body {
     background: #2563eb;
 }
 
+/* Style delete button directly in schedule-card (when no class is used) */
+.schedule-card > button,
+.schedule-card button {
+    padding: 0.5rem 1rem;
+    background: var(--danger);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.schedule-card > button:hover,
+.schedule-card button:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
 /* Empty State */
 .empty-state {
     text-align: center;
@@ -348,14 +366,6 @@ body.dark .schedule-form input {
 
 body.dark .schedule-section h2::before {
     background: #60a5fa;
-}
-
-body.dark .schedule-card {
-    border-left-color: #a78bfa;
-}
-
-body.dark .schedule-card:hover {
-    border-left-color: #60a5fa;
 }
 
 body.dark .schedule-info .time-badge {

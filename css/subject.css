@@ -1,4 +1,4 @@
-/* ==================== IMPORTS FROM BASE ==================== */
+
 * {
     padding: 0;
     margin: 0;
@@ -35,7 +35,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* NAVIGATION BAR */
+/* ==================== NAVIGATION (Reused) ==================== */
 .nav-section {
     position: sticky;
     top: 0;
@@ -128,7 +128,7 @@ body {
     }
 }
 
-/* \ SUBJECT SECTION  */
+/* ==================== SUBJECT SECTION ==================== */
 .sub-section {
     max-width: 1400px;
     margin: 2rem auto;
@@ -169,6 +169,26 @@ body {
     background: var(--bg-primary);
     color: var(--text-primary);
     transition: all 0.2s ease;
+}
+
+/* Bigger arrows for number input - Chrome, Safari, Edge */
+.add-section input[type="number"]::-webkit-outer-spin-button,
+.add-section input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+    height: 50px;
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Firefox number input */
+.add-section input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.add-section input[type="number"]:hover::-webkit-outer-spin-button,
+.add-section input[type="number"]:hover::-webkit-inner-spin-button {
+    opacity: 1;
 }
 
 .add-section input:focus,
@@ -218,28 +238,11 @@ body {
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-}
-
-.subject-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--accent-primary);
-    transform: scaleY(0);
-    transition: transform 0.3s ease;
 }
 
 .subject-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-}
-
-.subject-card:hover::before {
-    transform: scaleY(1);
 }
 
 .subject-card h3 {
@@ -352,7 +355,7 @@ body {
     box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
 }
 
-/*  DARK THEME */
+/* ==================== DARK THEME ==================== */
 body.dark {
     --bg-primary: #0a0a0a;
     --bg-secondary: #1a1a1a;
@@ -380,11 +383,7 @@ body.dark .edit-mode select {
     border-color: var(--border-color);
 }
 
-body.dark .subject-card::before {
-    background: #60a5fa;
-}
-
-/*  RESPONSIVE */
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
     .sub-section {
         padding: 0 1rem 1rem;

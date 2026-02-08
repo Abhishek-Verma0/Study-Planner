@@ -1,4 +1,4 @@
-/* ==================== BASE STYLES ==================== */
+
 * {
     padding: 0;
     margin: 0;
@@ -152,28 +152,11 @@ body {
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-}
-
-.setting-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--accent-primary);
-    transform: scaleY(0);
-    transition: transform 0.3s ease;
 }
 
 .setting-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
-}
-
-.setting-card:hover::before {
-    transform: scaleY(1);
 }
 
 .setting-card h3 {
@@ -247,10 +230,6 @@ body {
 .setting-card.danger {
     border-color: var(--danger);
     background: linear-gradient(to right, rgba(239, 68, 68, 0.05), var(--bg-secondary));
-}
-
-.setting-card.danger::before {
-    background: var(--danger);
 }
 
 .setting-card.danger h3 {
@@ -358,10 +337,6 @@ body.dark .app-title {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
-
-body.dark .setting-card::before {
-    background: #60a5fa;
 }
 
 body.dark .setting-card h3::before {
