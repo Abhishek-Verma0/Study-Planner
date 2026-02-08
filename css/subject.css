@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    
+    }
+    
+    body{
+        margin: 0;
+    }
+    
+    /*  nav scetion */
+    
+    .nav-section{
+        top: 0;
+        
+        padding: 1rem;
+        border-bottom: 2px solid black;
+        width: 100%;
+        
+    }
+    
+    
+    .nav-cont{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+    }
+    .app-title{
+        font-size: 1.5rem;
+        min-width: 20%;
+        
+        
+    }
+    .nav-options{
+        
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    
+    .nav-options > a{
+        margin-left: 2rem;
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+    
+        /* position: relative; */
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    
+    
+    .hamburger{
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    
+    /*  responsive for nav bar */
+    @media (max-width: 1000px){
+        .nav-options{
+            display: none;             
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: white;
+            flex-direction: column;
+            width: 200px;
+            border: 1px solid #a8a5a5;
+            padding: 1rem;
+        }
+    
+        .nav-options > a{
+            margin: 0.5rem 0;
+        }
+    
+        
+        .nav-options.active{
+            display: flex;
+        }
+        .hamburger{
+            display: block;
+        }
+    
+    
+    }
+    
+    
+    
+
+
+
+    
+    .sub-section{
+        max-width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    /* Add Section */
+    .add-section{
+        background: white;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+    
+    .add-section input{
+        padding: 8px;
+        margin-right: 10px;
+    }
+    
+    .add-section button{
+        padding: 8px 15px;
+        cursor: pointer;
+    }
+    
+    /* Subjects List */
+    .subjects-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    /* Subject Card */
+    .subject-card{
+        background: white;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .subject-card button{
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    

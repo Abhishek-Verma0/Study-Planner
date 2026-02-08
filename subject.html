@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study-Planner</title>
+    <link rel="stylesheet" href="./css/subject.css">
+</head>
+<body>
+    <!-- nav -->
+    <nav class="nav-section">
+        <div class="nav-cont">
+            <div class="app-title">Study-Planner</div>
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+            <div class="nav-options" id="nav-Option">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#subjects">Subjects</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#tasks">Tasks</a>
+                <a href="#progress">Progress</a>
+                <a href="#setttings">Settings</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--  subject mangament -->
+
+    <div class="sub-section">
+
+        <form class="add-section" id="addSub">
+            <h2>Add Subject</h2>
+
+            <input type="text" id="sub-Name" placeholder="Subject name">
+            <input type="number" id="sub-Hours" placeholder="Target hours/week" min="0">
+            
+
+            <select name="sub-prio" id="sub-priority">
+                <option value="">Select Priority</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button type="submit">Add Subject</button>
+        </form>
+
+        <!-- Existing Subjects -->
+        <div class="subjects-list" id="subjectsList">
+            <!-- JS will add subject cards here -->
+        </div>
+    </div>
+
+    <script src="./js/subject.js"></script>
+
+</body>
+</html>
