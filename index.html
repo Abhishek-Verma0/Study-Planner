@@ -25,7 +25,45 @@
     </nav>
 
 
+    <div class="dashboard">
+
+        <!-- Quick Stats -->
+        <h2>Overview</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <p>Total Subjects</p>
+                <h3 id="total-subjects">0</h3>
+            </div>
+            <div class="stat-box">
+                <p>Total Tasks</p>
+                <h3 id="total-tasks">0</h3>
+            </div>
+            <div class="stat-box">
+                <p>Completed</p>
+                <h3 id="completed-tasks">0</h3>
+            </div>
+            <div class="stat-box">
+                <p>Pending</p>
+                <h3 id="pending-tasks">0</h3>
+            </div>
+        </div>
+    
+        <!-- Today's Tasks -->
+        <h2>Today's Tasks</h2>
+        <div id="today-tasks" class="card-list"></div>
+    
+        <!-- Today's Schedule -->
+        <h2>Today's Study Plan</h2>
+        <div id="today-schedule" class="card-list"></div>
+    
+        <!-- Upcoming Deadlines -->
+        <h2>Upcoming Deadlines (Next 7 Days)</h2>
+        <div id="upcoming-deadlines" class="card-list"></div>
+    
+    </div>
     
     <script src="script.js"></script>
 </body>
 </html> 
+
+
