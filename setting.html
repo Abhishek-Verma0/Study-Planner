@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="./css/setting.css">
+</head>
+<body>
+
+    <nav class="nav-section">
+        <div class="nav-cont">
+            <div class="app-title">Study-Planner</div>
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+            <div class="nav-options" id="nav-Option">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#subjects">Subjects</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#tasks">Tasks</a>
+                <a href="#progress">Progress</a>
+                <a href="#setttings">Settings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-section">
+
+        <h2>Settings</h2>
+    
+        <!-- Theme -->
+        <div class="setting-card">
+            <h3>Theme</h3>
+            <p>Choose your preferred theme</p>
+            <button id="theme-btn">Toggle Dark Mode</button>
+        </div>
+    
+        <!-- Export -->
+        <div class="setting-card">
+            <h3>Export Data</h3>
+            <p>Download your subjects, tasks and schedules</p>
+            <button id="export-btn">Export Data</button>
+        </div>
+    
+        <!-- Reset -->
+        <div class="setting-card danger">
+            <h3>Reset All Data</h3>
+            <p>This will delete all saved data</p>
+            <button id="reset-btn">Reset All Data</button>
+        </div>
+    
+    </div>
+
+<script src="./js/setting.js"></script>
+<script src="./js/theme.js"></script>
+</body>
+</html>

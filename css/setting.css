@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
         margin: 0;
@@ -89,130 +90,87 @@
     
     }
     
+
+
+
+
+
     
+    /* Navbar */
+    .nav-section {
+        padding: 1rem;
+        border-bottom: 2px solid black;
+    }
     
+    .nav-cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     
-/* Task Layout */
-.task-section {
-    max-width: 100%;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Form */
-.task-form {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-}
-
-.task-form input,
-.task-form select {
-    padding: 15px;
-    flex: 1;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-}
-
-.task-form button {
-    padding: 10px 18px;
-    background: #007bff;
-    color: white;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    cursor: pointer;
+    .nav-options a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+    }
     
-}
-.task-form button:hover{
+    /* Main */
+    .settings-section {
+        max-width: 700px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
     
-    background-color: white;
-    color: #007bff;
-    border: 2px solid silver;
-}
+    .setting-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+    
+    .setting-card button {
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+    
+    /* Danger section */
+    .danger {
+        border-color: #dc3545;
+    }
+    
+    .danger button {
+        background: #dc3545;
+        color: white;
+        border: none;
+    }
+    
 
 
-.section-title {
-    margin: 15px 0 8px;
-}
-
-/* for task cards from js  */
-.task-card {
-    border: 1px solid #dddddd;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #91c7e0;
-}
-
-/*  background for the completed task */
-.completed {
-    background: #61db61;
-}
-
-/* /bg for incomplete tasks */
-.incomplete{
-    background: #ff0303;
-}
-
-.task-actions button {
-    margin-left: 6px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* status tags in js like done pending  */
-.status-tag {
-    font-size: 12px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-left: 10px;
-}
-
-.status-done {
-    background: #28a745;
-    color: white;
-}
-
-.status-pending {
-    background: #dc3545;
-    color: white;
-}
-
-
-.task-stat {
-    max-width: 70%;
-    margin: 10px auto 30px;
-    display: flex;
-    gap: 20px;
-}
-
-.task-stat div {
-    flex: 1;
-    background: white;
-    padding: 15px;
-    border-radius: 6px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-
-.task-stat #task-completed{
-    background-color: #61db61;
-}
-.task-stat #notDone-task{
-    background-color: #f81212;
-}
+    /* ---------- Dark Theme ---------- */
+    body.dark {
+        background: #121212;
+        color: #ffffff;
+    }
+    
+    body.dark .settings-section {
+        background: #1e1e1e;
+    }
+    
+    body.dark .setting-card {
+        background: #2a2a2a;
+        box-shadow: none;
+    }
+    
+    body.dark button {
+        opacity: 0.9;
+    }
+    
 
 
 
-
-/* Dark theme */
+    /* Dark theme */
 body.dark {
     background: #121212;
     color: #ffffff;
