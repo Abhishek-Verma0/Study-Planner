@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study-Planner</title>
+    <link rel="stylesheet" href="./css/task.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="nav-section">
+    <div class="nav-cont">
+        <div class="app-title">Study-Planner</div>
+        <div class="hamburger" id="hamburger">☰</div>
+        <div class="nav-options" id="nav-Option">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#progress">Progress</a>
+            <a href="#settings">Settings</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Task Section -->
+<div class="task-section">
+
+    <h2>Add Task</h2>
+
+    <form id="task-Form" class="task-form">
+        <input type="text" id="task-title" placeholder="Enter task name" required>
+
+        <select id="task-subject" required>
+            <option value="">Select Subject</option>
+        </select>
+
+        <input type="date" id="task-date" required>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Pending -->
+    <h2 class="section-title">Pending Tasks</h2>
+    <div id="pending-list" class="task-list"></div>
+
+    <!-- Recent -->
+    <h2 class="section-title">Recent Tasks (Last 50)</h2>
+    <div id="task-list" class="task-list"></div>
+
+</div>
+
+<!-- Analytics -->
+<div class="task-stat">
+    <div id="task-completed"></div>
+    <div id="notDone-task"></div>
+</div>
+
+<script src="./js/task.js"></script>
+</body>
+</html>
