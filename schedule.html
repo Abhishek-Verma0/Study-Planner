@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="./css/schedule.css">
+</head>
+<body>
+
+    <nav class="nav-section">
+        <div class="nav-cont">
+            <div class="app-title">Study-Planner</div>
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+            <div class="nav-options" id="nav-Option">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#subjects">Subjects</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#tasks">Tasks</a>
+                <a href="#progress">Progress</a>
+                <a href="#setttings">Settings</a>
+            </div>
+        </div>
+    </nav>
+
+<div class="schedule-section">
+
+    <h2>Add Study Slot</h2>
+
+    <form id="schedule-form" class="schedule-form">
+        <select id="schedule-subject" required>
+            <option value="">Select Subject</option>
+        </select>
+
+        <input type="date" id="schedule-date" required>
+        <input type="time" id="start-time" required>
+        <input type="time" id="end-time" required>
+
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Today's Schedule</h2>
+    <div id="today-list" class="schedule-list"></div>
+
+    <h2>Weekly Schedule (Next 7 Days)</h2>
+    <div id="week-list" class="schedule-list"></div>
+
+</div>
+
+<script src="./js/schedule.js"></script>
+</body>
+</html>

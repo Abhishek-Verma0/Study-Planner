@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    
+    }
+    
+    body{
+        margin: 0;
+    }
+    
+    /*  nav scetion */
+    
+    .nav-section{
+        top: 0;
+        padding: 1rem;
+        border-bottom: 2px solid black;
+        width: 100%;
+        
+    }
+    
+    
+    .nav-cont{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+    }
+    .app-title{
+        font-size: 1.5rem;
+        min-width: 20%;
+        
+        
+    }
+    .nav-options{
+        
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    
+    .nav-options > a{
+        margin-left: 2rem;
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+    
+        /* position: relative; */
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    
+    
+    .hamburger{
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    
+    /*  responsive for nav bar */
+    @media (max-width: 1000px){
+        .nav-options{
+            display: none;             
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: white;
+            flex-direction: column;
+            width: 200px;
+            border: 1px solid #a8a5a5;
+            padding: 1rem;
+        }
+    
+        .nav-options > a{
+            margin: 0.5rem 0;
+        }
+    
+        
+        .nav-options.active{
+            display: flex;
+        }
+        .hamburger{
+            display: block;
+        }
+    
+    
+    }
+    
+    
+    
+    
+
+
+.schedule-section {
+    max-width: 100%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.schedule-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.schedule-form select,
+.schedule-form input {
+    padding: 8px;
+    flex: 1;
+}
+
+.schedule-form button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.schedule-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
