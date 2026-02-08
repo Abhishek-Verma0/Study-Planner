@@ -197,11 +197,7 @@ No installation or server required.
 
 
 
-## 🔗 Live Demo (Optional)
 
-(Add GitHub Pages or live link if available)
-
----
 
 ## 📜 Author
 
