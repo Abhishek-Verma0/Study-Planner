@@ -1,194 +1,409 @@
-
-*{
+/* ==================== BASE STYLES ==================== */
+* {
     padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    
-    }
-    
-    body{
-        margin: 0;
-    }
-    
-    /*  nav scetion */
-    
-    .nav-section{
-        top: 0;
-        padding: 1rem;
-        border-bottom: 2px solid black;
-        width: 100%;
-        
-    }
-    
-    
-    .nav-cont{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        
-    }
-    .app-title{
-        font-size: 1.5rem;
-        min-width: 20%;
-        
-        
-    }
-    .nav-options{
-        
-        display: flex;
-        flex-wrap: wrap;
-    
-    }
-    
-    
-    .nav-options > a{
-        margin-left: 2rem;
-        text-decoration: none;
-        color: black;
-        padding: 1rem;
-    
-        /* position: relative; */
-        display: inline-block;
-        margin: 5px;
-    }
-    
-    
-    
-    .hamburger{
-        display: none;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    
-    /*  responsive for nav bar */
-    @media (max-width: 1000px){
-        .nav-options{
-            display: none;             
-            position: absolute;
-            top: 70px;
-            right: 0;
-            background: white;
-            flex-direction: column;
-            width: 200px;
-            border: 1px solid #a8a5a5;
-            padding: 1rem;
-        }
-    
-        .nav-options > a{
-            margin: 0.5rem 0;
-        }
-    
-        
-        .nav-options.active{
-            display: flex;
-        }
-        .hamburger{
-            display: block;
-        }
-    
-    
-    }
-    
+    margin: 0;
+    box-sizing: border-box;
+}
 
-
-
-
-
+:root {
+    /* Light Theme Colors */
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f1f3f5;
+    --text-primary: #1a1a1a;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
     
-    /* Navbar */
+    /* Accent Colors */
+    --accent-primary: #4361ee;
+    --accent-hover: #3451d8;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --danger-hover: #dc2626;
+    --info: #3b82f6;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==================== NAVIGATION ==================== */
+.nav-section {
+    position: sticky;
+    top: 0;
+    padding: 1rem 2rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-primary), #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+}
+
+.nav-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.nav-options > a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.nav-options > a:hover {
+    color: var(--accent-primary);
+    background: var(--bg-tertiary);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+    background: var(--bg-tertiary);
+}
+
+@media (max-width: 1000px) {
     .nav-section {
         padding: 1rem;
-        border-bottom: 2px solid black;
     }
-    
-    .nav-cont {
+
+    .nav-options {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 1rem;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        width: 220px;
+        border: 1px solid var(--border-color);
+        padding: 0.75rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-options.active {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
-    
-    .nav-options a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: black;
-    }
-    
-    /* Main */
-    .settings-section {
-        max-width: 700px;
-        margin: 30px auto;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-    }
-    
-    .setting-card {
-        border: 1px solid #ddd;
-        padding: 15px;
-        margin-bottom: 20px;
-        border-radius: 6px;
-    }
-    
-    .setting-card button {
-        padding: 8px 16px;
-        cursor: pointer;
-    }
-    
-    /* Danger section */
-    .danger {
-        border-color: #dc3545;
-    }
-    
-    .danger button {
-        background: #dc3545;
-        color: white;
-        border: none;
-    }
-    
 
-
-    /* ---------- Dark Theme ---------- */
-    body.dark {
-        background: #121212;
-        color: #ffffff;
+    .hamburger {
+        display: block;
     }
-    
-    body.dark .settings-section {
-        background: #1e1e1e;
-    }
-    
-    body.dark .setting-card {
-        background: #2a2a2a;
-        box-shadow: none;
-    }
-    
-    body.dark button {
-        opacity: 0.9;
-    }
-    
+}
 
+/* ==================== SETTINGS SECTION ==================== */
+.settings-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 2rem 2rem;
+}
 
+.settings-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
 
-    /* Dark theme */
+/* Setting Cards */
+.setting-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.setting-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-primary);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.setting-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.setting-card:hover::before {
+    transform: scaleY(1);
+}
+
+.setting-card h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.setting-card h3::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+}
+
+.setting-card p {
+    margin: 0 0 1.5rem 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.setting-card button {
+    padding: 0.875rem 2rem;
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+.setting-card button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.setting-card button:active {
+    transform: translateY(0);
+}
+
+/* Theme Toggle Button */
+.setting-card:first-of-type button {
+    background: linear-gradient(135deg, var(--accent-primary), #7c3aed);
+}
+
+.setting-card:first-of-type button:hover {
+    background: linear-gradient(135deg, var(--accent-hover), #6d28d9);
+}
+
+/* Export Button */
+.setting-card:nth-of-type(2) button {
+    background: var(--success);
+}
+
+.setting-card:nth-of-type(2) button:hover {
+    background: #0ea571;
+}
+
+/* Danger Section */
+.setting-card.danger {
+    border-color: var(--danger);
+    background: linear-gradient(to right, rgba(239, 68, 68, 0.05), var(--bg-secondary));
+}
+
+.setting-card.danger::before {
+    background: var(--danger);
+}
+
+.setting-card.danger h3 {
+    color: var(--danger);
+}
+
+.setting-card.danger h3::before {
+    background: var(--danger);
+    animation: pulse-danger 2s infinite;
+}
+
+@keyframes pulse-danger {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.setting-card.danger button {
+    background: var(--danger);
+    color: white;
+}
+
+.setting-card.danger button:hover {
+    background: var(--danger-hover);
+}
+
+/* Icon Styles (if you want to add icons) */
+.setting-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-tertiary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Toggle Switch (optional enhancement) */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-left: auto;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/* ==================== DARK THEME ==================== */
 body.dark {
-    background: #121212;
-    color: #ffffff;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #2a2a2a;
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --border-color: #374151;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-body.dark .nav-section {
-    background: #1e1e1e;
-    border-bottom: 1px solid #444;
+body.dark .app-title {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-body.dark .nav-options a {
-    color: #ffffff;
+body.dark .setting-card::before {
+    background: #60a5fa;
 }
 
-body.dark .task-card,
-body.dark .setting-card,
-body.dark .stat-box,
-body.dark .card {
-    background: #1e1e1e;
-    border-color: #444;
+body.dark .setting-card h3::before {
+    background: #60a5fa;
+}
+
+body.dark .setting-card:first-of-type button {
+    background: linear-gradient(135deg, #60a5fa, #a78bfa);
+}
+
+body.dark .setting-card:first-of-type button:hover {
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+}
+
+body.dark .setting-card.danger {
+    background: linear-gradient(to right, rgba(239, 68, 68, 0.1), var(--bg-secondary));
+}
+
+body.dark .setting-icon {
+    background: var(--bg-tertiary);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .settings-section {
+        padding: 0 1rem 1rem;
+        margin: 2rem auto;
+    }
+
+    .settings-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .setting-card {
+        padding: 1.5rem;
+    }
+
+    .setting-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .setting-card button {
+        max-width: 100%;
+    }
 }

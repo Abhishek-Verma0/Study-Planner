@@ -1,8 +1,8 @@
-*{
-padding: 0;
+/* ==================== RESET & BASE ==================== */
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
 :root {
@@ -35,8 +35,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/*  nav scetion */
-
+/* ==================== NAVIGATION ==================== */
 .nav-section {
     position: sticky;
     top: 0;
@@ -48,7 +47,6 @@ body {
     transition: all 0.3s ease;
 }
 
-
 .nav-cont {
     display: flex;
     align-items: center;
@@ -56,6 +54,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
 }
+
 .app-title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -65,14 +64,14 @@ body {
     background-clip: text;
     letter-spacing: -0.5px;
 }
+
 .nav-options {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-
-nav-options > a {
+.nav-options > a {
     text-decoration: none;
     color: var(--text-secondary);
     padding: 0.75rem 1.25rem;
@@ -117,7 +116,7 @@ nav-options > a {
     background: var(--bg-tertiary);
 }
 
-/*  responsive for nav bar */
+/* Responsive Navigation */
 @media (max-width: 1000px) {
     .nav-section {
         padding: 1rem;
@@ -155,9 +154,7 @@ nav-options > a {
     }
 }
 
-
-
-/* Dashboard */
+/* ==================== DASHBOARD ==================== */
 .dashboard {
     max-width: 1400px;
     margin: 2rem auto;
@@ -171,7 +168,7 @@ nav-options > a {
     color: var(--text-primary);
 }
 
-/* Stats */
+/* Stats Section */
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -210,7 +207,7 @@ nav-options > a {
     margin: 0;
 }
 
-/* Lists */
+/* Card Lists */
 .card-list {
     display: flex;
     flex-direction: column;
@@ -232,10 +229,7 @@ nav-options > a {
     border-color: var(--accent-primary);
 }
 
-
-
-
-/* Dark theme */
+/* ==================== DARK THEME ==================== */
 body.dark {
     --bg-primary: #0a0a0a;
     --bg-secondary: #1a1a1a;
@@ -273,9 +267,7 @@ body.dark .stat-box h3 {
     color: #60a5fa;
 }
 
-
-
-
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
     .dashboard {
         padding: 0 1rem 1rem;
