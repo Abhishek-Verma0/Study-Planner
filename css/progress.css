@@ -178,15 +178,6 @@ body {
     color: var(--accent-primary);
 }
 
-/* Progress Bar Container */
-.progress-bar-container {
-    background: var(--bg-secondary);
-    padding: 2.5rem;
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
-    margin-bottom: 2rem;
-}
 
 /* Progress Bar */
 .progress-bar {
@@ -257,71 +248,9 @@ body {
     margin-top: 2rem;
 }
 
-/* Celebratory Styling for High Performance */
-.high-performance {
-    background: linear-gradient(135deg, var(--success), #059669) !important;
-    animation: pulse 2s infinite;
-}
 
-.medium-performance {
-    background: linear-gradient(135deg, var(--info), #2563eb) !important;
-}
 
-.low-performance {
-    background: linear-gradient(135deg, var(--warning), #d97706) !important;
-}
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
-}
-
-/* Visual Statistics */
-.visual-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-}
-
-.stat-card {
-    background: var(--bg-secondary);
-    padding: 2rem;
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.stat-card .icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.stat-card h4 {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.stat-card .value {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
 
 /* ==================== DARK THEME ==================== */
 body.dark {
@@ -378,9 +307,6 @@ body.dark .progress-bar {
         gap: 0.5rem;
     }
 
-    .progress-bar-container {
-        padding: 1.5rem;
-    }
 
     .progress-bar {
         height: 30px;

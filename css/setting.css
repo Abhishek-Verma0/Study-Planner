@@ -255,69 +255,10 @@ body {
     color: white;
 }
 
-.setting-card.danger button:hover {
-    background: var(--danger-hover);
-}
 
-/* Icon Styles (if you want to add icons) */
-.setting-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--bg-tertiary);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
 
-/* Toggle Switch (optional enhancement) */
-.toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    margin-left: auto;
-}
 
-.toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--border-color);
-    transition: 0.3s;
-    border-radius: 30px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.3s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: var(--accent-primary);
-}
-
-input:checked + .slider:before {
-    transform: translateX(30px);
-}
 
 /* ==================== DARK THEME ==================== */
 body.dark {
